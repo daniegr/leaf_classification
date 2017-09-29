@@ -3,6 +3,7 @@ import numpy as np
 import os
 import pandas as pd
 
+# Extract data
 def load_data():
 
     # Parameters
@@ -55,17 +56,5 @@ def load_data():
     X_test = X[split_value:]
     y_train = y[:split_value]
     y_test = y[split_value:]
-    print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
     return X_train, X_test, y_train, y_test
-
-# Start a new session to show example output.
-with tf.Session() as sess:
-
-    # Required to get the filename matching to run.
-    init = tf.global_variables_initializer()
-    sess.run(init)
-    tf.train.start_queue_runners(sess=sess)
-
-
-print("Successfuly terminated the program")
