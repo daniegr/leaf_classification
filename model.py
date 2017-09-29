@@ -100,7 +100,7 @@ def cnn_model_fn(features, labels, mode):
     dropout = tf.layers.dropout(inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN)
 
     # Output Layer
-    output_layer = tf.layers.dense(inputs=dropout, units=29)
+    output_layer = tf.layers.dense(inputs=dropout, units=99)
 
     # Generate predictions (for PREDICT and EVAL mode)
     predictions = {
